@@ -27,15 +27,19 @@ nav {
     margin: auto;
 }
 header nav ul {
-    display: flex;
-    gap: clamp(5px, 10vh, 200px);     
+    display: flex;    
     list-style: none; 
     padding: 0;
     margin: 0;
     font-weight: 600;
+    justify-content: space-between;
 }
 .header_img {
     height: stretch;
+        filter: drop-shadow(0px 0px 5px black);
+}
+.nav_list_item_1, .nav_list_item_2, .nav_list_item_3 {
+    margin-inline: 5vw;
 }
 .nav_list_item_1:hover, 
 .nav_list_item_2:hover, 
@@ -75,8 +79,7 @@ main {
     display: grid;
     align-content: center;
     width: 100%;
-    height: 45vh;
-    border: 1px solid red;
+    height: 40vh;
 }
 .deco {
     display: flex;
@@ -93,8 +96,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 99%;
-    height: 53vh;
-    border: 1px solid green;
+    height: 58vh;
     border-radius: 15px;
     background-color: #d2a777;
     gap: 10px;
@@ -109,13 +111,31 @@ main {
     justify-content: center;
 }
 .board_box {
-    display: inline;
+    box-sizing: border-box;
     width: 14.5%;
     height: 75%;
     background-color: #352213;
     box-shadow: 2px 3px 1px black;
     border: 3px solid #79461d;
     border-radius: 13px;
+    padding: 10px;
+    text-align: center;
+}
+.board_box .board_title {
+    font-size: clamp(20px, 2vw, 25px);
+    color: #C08A5A;
+    font-weight: 300;
+}
+.board_box .board_text {
+    margin-top: 2px;
+    font-size: clamp(12px, 1.1vw, 13.6px);
+    color: #C08A5A;
+    font-family: "Poppins", sans-serif;
+}
+.board_img {
+    height: 45%;
+    margin: auto;
+    display: flex;
 }
 .main_h1_title {
     width: 100%;
@@ -188,6 +208,15 @@ main {
     border-radius: 12px;
     margin: 30px 2%;
 }
+.board_box .main_button {
+    align-self: normal;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    top: 75%;
+    position: sticky;
+    font-family: "Poppins", sans-serif;
+}
 .button_img {
     margin: 4px;
     height: stretch;
@@ -200,6 +229,7 @@ main {
             /* Footer */
 
 footer{
+    margin-top: 10px;
     background-color: #2A1B16;
     color: #F5E6D3;
     padding: 40px 8%;
@@ -237,4 +267,198 @@ footer hr{
     text-align: center;
     font-size: 14px;
     color: #B89F8A;
+}
+
+                /* CHAT GPT PART*/
+/* HERO */
+.aboutUs_main {
+    height: max-content;
+}
+.about-hero{
+    height: 400px;
+    background-image: linear-gradient(rgba(32,20,15,.55),rgba(32,20,15,.55)),
+    url("/public/img/mainImage2.png"); /* tu imagen */
+
+    background-size: cover;
+    background-position: center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.overlay h1{
+    font-size:3rem;
+    color:#F5E6D3;
+    margin-bottom:10px;
+}
+.overlay p{
+
+    color:#E6D1B3;
+    font-size:1.2rem;
+
+}
+/* CONTENEDOR */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* PRESENTACIÓN */
+
+.about{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+
+    padding:70px 0;
+}
+.texto{
+    flex:2;
+}
+.texto h2,
+.porque h2,
+.sedes h2,
+.beneficios h2{
+    color:#F5E6D3;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+.texto p,
+.alianza{
+    color:#D8C3A5;
+    line-height:1.8;
+}
+.info-card{
+    flex:1;
+
+    background:#3B2A22;
+    padding:30px;
+
+    border-radius:15px;
+}
+.info-card h3{
+    color:#F5E6D3;
+    margin-bottom:20px;
+}
+.info-card p{
+    color:#D8C3A5;
+    margin:8px 0;
+}
+
+/* SECCIONES */
+
+.porque,
+.beneficios{
+    background:#2f211c;
+    padding:70px 0;
+}
+.cards,
+.ciudades,
+.beneficios-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+.card,
+.ciudad,
+.beneficio{
+    background:#4E342E;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+.card:hover,
+.ciudad:hover,
+.beneficio:hover{
+    transform:translateY(-5px);
+}
+.card h3,
+.ciudad h3,
+.beneficio h3{
+    color:#F5E6D3;
+    margin-bottom:15px;
+}
+.card p,
+.ciudad span,
+.beneficio p{
+    color:#D8C3A5;
+}
+.sedes{
+    padding:70px 0;
+}
+.alianza{
+    display: flex;
+    align-items: center;
+    margin-top:40px;
+}
+/*BACKGROUNDS*/
+
+.ciudad {
+    background-position: center;
+    background-size: cover;
+    height: 134px;
+    width: 175px;
+}
+.ciudad.bogota {
+    background-image: url(/public/img/bogota.png);
+}
+.ciudad.medellin {
+    background-image: url(/public/img/medellin.png);
+}
+.ciudad.cali {
+    background-image: url(/public/img/cali.png);
+}
+.ciudad.santa_marta {
+    background-image: url(/public/img/santaMarta.png);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+.about{
+    flex-direction:column;
+}
+.overlay h1{
+    font-size:2.2rem;
+}
+.overlay p{
+    font-size:1rem;
+}
+.texto h2,
+.porque h2,
+.sedes h2,
+.beneficios h2{
+    text-align:center;
+}
+
+}
+
+@media (max-width: 1000px) {
+    .main_content-box {
+        width: 100%;
+    }
+    .menu_main {
+        height: max-content;
+        padding-bottom: 7px;
+        background-size: contain;
+        background-position: top;
+        background-repeat: repeat-y;
+    }
+    .menu_main_cofee_board {
+        padding: 15px;
+        height: max-content;
+    }
+    .board_box {
+        flex: 20%;
+        height: 316.2px;
+        flex-basis: 190px;
+    }
+    .board_box .board_text, 
+    .board_box .board_title {
+        margin: 10px;
+    }
 }

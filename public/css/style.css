@@ -57,10 +57,10 @@ main {
     position: static;
 }
 .inicio_main {
-    background-image: url("/public/img/mainImage.png");
+    background-image: url("../img/mainImage.png");
 }
 .menu_main {
-    background-image: url("/public/img/mainImage2.png");
+    background-image: url("../img/mainImage2.png");
     background-position: center;
 }
 .main_content-box {
@@ -277,7 +277,7 @@ footer hr{
 .about-hero{
     height: 400px;
     background-image: linear-gradient(rgba(32,20,15,.55),rgba(32,20,15,.55)),
-    url("/public/img/mainImage2.png"); /* tu imagen */
+    url("../img/mainImage2.png"); /* tu imagen */
 
     background-size: cover;
     background-position: center;
@@ -404,16 +404,16 @@ footer hr{
     width: 175px;
 }
 .ciudad.bogota {
-    background-image: url(/public/img/bogota.png);
+    background-image: url(../img/bogota.png);
 }
 .ciudad.medellin {
-    background-image: url(/public/img/medellin.png);
+    background-image: url(../img/medellin.png);
 }
 .ciudad.cali {
-    background-image: url(/public/img/cali.png);
+    background-image: url(../img/cali.png);
 }
 .ciudad.santa_marta {
-    background-image: url(/public/img/santaMarta.png);
+    background-image: url(../img/santaMarta.png);
 }
 
 /* RESPONSIVE */
